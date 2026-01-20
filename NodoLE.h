@@ -7,16 +7,16 @@
 
 
 class NodoLE {
-    private:
+private:
     int x;
     NodoLE *sig;
-    public:
+public:
     NodoLE();
-    NodoLE(int x,NodoLE*s);
+    NodoLE(int y,NodoLE*s);
     ~NodoLE();
     int getX();
     NodoLE *getSig();
-    void setSig(NodoLE *sig);
+    void setSig(NodoLE *s);
 };
 
 

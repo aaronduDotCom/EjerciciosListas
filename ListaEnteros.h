@@ -5,8 +5,6 @@
 #ifndef EJERCICIOSLISTAS_LISTAENTEROS_H
 #define EJERCICIOSLISTAS_LISTAENTEROS_H
 
-#include <string>
-
 #include "NodoLE.h"
 
 #include <string>
@@ -30,7 +28,15 @@ class ListaEnteros {
     void agregarFinal(int valor);
     bool eliminarInicio();
     bool eliminarFinal();
+
     string toString();
+
+    int obtenerPrimero(); //retorna el valor del primer elemento
+    int obtenerUltimo(); //retorna el valor del último elemento
+    int sumarElementos(); //retorna la suma de todos los elementos
+    double promedio(); //retorna el promedio de los elementos
+    int encontrarMaximo(); //retorna el valor máximo
+    int encontrarMinimo(); //retorna el valor mínimo
 };
 
 

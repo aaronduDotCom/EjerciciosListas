@@ -22,8 +22,10 @@ int ListaEnteros::getcant() {return cant;}
 
 void ListaEnteros::agregarInicio(int valor) {
     NodoLE *nuevo = new NodoLE(valor,primero);
+
     if (vacia())
         ultimo=nuevo;
+
     primero=nuevo;
     cant++;
 }
@@ -63,12 +65,12 @@ bool ListaEnteros::eliminarFinal() {
     }
 
     NodoLE* actual = primero;
-    while (actual->getSig()->getSig() != NULL) {
+    while (actual->getSig()->getSig() != nullptr) {
         actual = actual->getSig();
     }
 
     delete actual->getSig();
-    actual->setSig(NULL);
+    actual->setSig(nullptr);
     ultimo = actual;
     cant--;
     return true;
@@ -78,10 +80,72 @@ string ListaEnteros::toString() {
     stringstream ss;
     NodoLE* actual = primero;
 
-    while (actual != NULL) {
+    while (actual != nullptr) {
         ss << actual->getX() << endl;
         actual = actual->getSig();
     }
 
     return ss.str();
+}
+
+int ListaEnteros::obtenerPrimero() {
+    return primero->getX();
+}
+
+int ListaEnteros::obtenerUltimo() {
+    return ultimo->getX();
+}
+
+int ListaEnteros::sumarElementos() {
+    if (vacia())
+        return 0;
+
+    NodoLE *actual = primero;
+    int suma=0;
+    while (actual!=nullptr) {
+        suma+=actual->getX();
+        actual=actual->getSig();
+    }
+    return suma;
+}
+
+double ListaEnteros::promedio() {
+    if (vacia())
+        return 0;
+
+    NodoLE *actual = primero;
+    double suma=0;
+    while (actual!=nullptr) {
+        suma+=actual->getX();
+        actual=actual->getSig();
+    }
+    return suma/cant;
+}
+
+int ListaEnteros::encontrarMaximo() {
+    if (vacia())
+        return 0;
+
+    NodoLE *actual = primero;
+    int max=0;
+    while (actual!=nullptr) {
+        if (max<actual->getX())
+            max=actual->getX();
+        actual=actual->getSig();
+    }
+    return max;
+}
+
+int ListaEnteros::encontrarMinimo() {
+    if (vacia())
+        return 0;
+
+    NodoLE *actual = primero;
+    int min=actual->getX();
+    while (actual!=nullptr) {
+        if (min>actual->getX())
+            min=actual->getX();
+        actual=actual->getSig();
+    }
+    return min;
 }

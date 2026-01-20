@@ -7,4 +7,10 @@ add_executable(EjerciciosListas main.cpp
         ListaEnteros.cpp
         ListaEnteros.h
         NodoLE.cpp
-        NodoLE.h)
+        NodoLE.h
+        ListaBusqueda.cpp
+        ListaBusqueda.h
+        NodoLC.cpp
+        NodoLC.h
+        ListaCaracteres.cpp
+        ListaCaracteres.h)
