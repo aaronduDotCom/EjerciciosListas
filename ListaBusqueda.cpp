@@ -6,7 +6,12 @@
 
 ListaBusqueda::ListaBusqueda() {
     primero = nullptr;
-    actual = primero;
+    actual = nullptr;
+}
+
+ListaBusqueda::~ListaBusqueda() {
+    while (!vacia())
+        eliminarInicio();
 }
 
 bool ListaBusqueda::vacia() {
@@ -18,6 +23,16 @@ void ListaBusqueda::agregarInicio(int valor) {
     NodoLE *nuevo = new NodoLE(valor,primero);
 
     primero=nuevo;
+}
+
+bool ListaBusqueda::eliminarInicio() {
+    if (primero==nullptr) {return false;}
+
+    NodoLE *temp = primero;
+    primero=primero->getSig();
+    delete temp;
+
+    return true;
 }
 
 string ListaBusqueda::toString() {
@@ -35,18 +50,21 @@ string ListaBusqueda::toString() {
 bool ListaBusqueda::buscar(int valor) {
     if (primero==nullptr)
         return false;
+
     actual=primero;
     while (actual!=nullptr) {
         if (actual->getX()==valor)
             return true;
         actual=actual->getSig();
     }
+
     return false;
 }
 
 int ListaBusqueda::contarApariciones(int valor) {
     if (primero==nullptr)
         return 0;
+
     actual=primero;
     int cant=0;
     while (actual!=nullptr) {

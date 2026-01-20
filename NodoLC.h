@@ -5,7 +5,6 @@
 #ifndef EJERCICIOSLISTAS_NODOLC_H
 #define EJERCICIOSLISTAS_NODOLC_H
 
-
 class NodoLC {
 private:
     NodoLC* sig;

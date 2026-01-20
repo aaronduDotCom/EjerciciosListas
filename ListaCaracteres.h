@@ -22,6 +22,8 @@ public:
     bool vacia();
     void agregarInicio(char c);
     void agregarFinal(char c);
+    bool eliminarInicio();
+
     int contarCaracter(char c); //cuenta apariciones de un carácter
     bool esPalindromo(); //verifica si la lista forma un palíndromo
     string obtenerCadena(); //retorna los caracteres como string

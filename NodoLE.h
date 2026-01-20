@@ -5,7 +5,6 @@
 #ifndef EJERCICIOSLISTAS_NODOLE_H
 #define EJERCICIOSLISTAS_NODOLE_H
 
-
 class NodoLE {
 private:
     int x;

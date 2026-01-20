@@ -17,8 +17,10 @@ private:
     NodoLE* actual;
 public:
     ListaBusqueda();
+    ~ListaBusqueda();
     bool vacia();
     void agregarInicio(int valor);
+    bool eliminarInicio();
 
     string toString();
 

@@ -13,4 +13,8 @@ add_executable(EjerciciosListas main.cpp
         NodoLC.cpp
         NodoLC.h
         ListaCaracteres.cpp
-        ListaCaracteres.h)
+        ListaCaracteres.h
+        NodoLR.cpp
+        NodoLR.h
+        ListaReales.cpp
+        ListaReales.h)

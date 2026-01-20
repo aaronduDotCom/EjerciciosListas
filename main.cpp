@@ -3,6 +3,7 @@
 #include "ListaEnteros.h"
 #include "ListaBusqueda.h"
 #include "ListaCaracteres.h"
+#include "ListaReales.h"
 
 using namespace std;
 
@@ -66,7 +67,7 @@ int main() {
                 case 3: {
                     ListaBusqueda lista;
 
-                    cout<<"Ejercicio 1"<<"\n\n";
+                    cout<<"Ejercicio 3"<<"\n\n";
 
                     cout<<"Primer prueba nada"<<"\n\n";
                     cout<<lista.toString()<<"\n\n";
@@ -94,22 +95,79 @@ int main() {
 
                 }break;
                 case 4: {
-                    ListaBusqueda lista;
+                    ListaCaracteres lista;
 
-                    cout<<"Ejercicio 1"<<"\n\n";
+                    cout<<"Ejercicio 4"<<"\n\n";
 
                     cout<<"Primer prueba nada"<<"\n\n";
                     cout<<lista.toString()<<"\n\n";
 
                     cout<<"Segunda prueba agregamos unos nodos (inicio y final)"<<"\n\n";
-                    lista.agregarInicio(1);
-                    lista.agregarInicio(2);
-                    lista.agregarInicio(3);
+                    lista.agregarInicio('a');
+                    lista.agregarInicio('2');
+                    lista.agregarInicio('a');
                     cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Tercer prueba contar x caracteres"<<"\n";
+                    cout<<lista.contarCaracter('a')<<"\n\n";
+
+                    cout<<"Cuarta prueba saber si es un palindromo"<<"\n";
+                    cout<<lista.esPalindromo()<<"\n\n";
+
+                    cout<<"Quinta prueba obtener la lista como cadena"<<"\n";
+                    cout<<lista.obtenerCadena()<<"\n\n";
+
+                    cout<<"Sexta prueba invertir la lista"<<"\n";
+                    lista.invertir();
+                    cout<<lista.toString()<<"\n\n";
+
                 }break;
-                case 5:{}
+                case 5: {
+                    ListaReales lista;
+
+                    cout<<"Ejercicio 5"<<"\n\n";
+
+                    cout<<"Primer prueba nada"<<"\n\n";
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Segunda prueba agregamos unos nodos (inicio y final)"<<"\n\n";
+                    lista.agregarInicio(127.3);
+                    lista.agregarInicio(4/3);
+                    lista.agregarInicio(0.1234);
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Tercer prueba suma"<<"\n";
+                    cout<<lista.suma()<<"\n\n";
+
+                    cout<<"Cuarta prueba promedio"<<"\n";
+                    cout<<lista.promedio()<<"\n\n";
+
+                    cout<<"Quinta prueba produco"<<"\n";
+                    cout<<lista.producto()<<"\n\n";
+
+                    cout<<"Sexta prueba cantidad de positivos"<<"\n";
+                    cout<<lista.contarPositivos()<<"\n\n";
+
+                    cout<<"Septima prueba cantidad de negativos"<<"\n";
+                    cout<<lista.contarNegativos()<<"\n\n";
+
+                    cout<<"Octava prueba mayor"<<"\n";
+                    cout<<lista.encontrarMayor()<<"\n\n";
+
+                    cout<<"Novena prueba menor"<<"\n";
+                    cout<<lista.encontrarMenor()<<"\n\n";
+                }break;
             }
             //6-10
+            {
+                case 6: {
+
+                }break;
+                case 7:{}break;
+                case 8:{}break;
+                case 9:{}break;
+                case 10:{}break;
+            }
         }
     }
 }
