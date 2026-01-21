@@ -20,6 +20,8 @@ NodoLE::~NodoLE() {
 
 int NodoLE::getX() {return x;}
 
+void NodoLE::setX(int x) {this->x=x;}
+
 NodoLE * NodoLE::getSig() {return sig;}
 
 void NodoLE::setSig(NodoLE *s) {sig=s;}

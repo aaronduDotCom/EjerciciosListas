@@ -17,4 +17,12 @@ add_executable(EjerciciosListas main.cpp
         NodoLR.cpp
         NodoLR.h
         ListaReales.cpp
-        ListaReales.h)
+        ListaReales.h
+        ListaPila.cpp
+        ListaPila.h
+        ListaCola.cpp
+        ListaCola.h
+        ListaDuplicados.cpp
+        ListaDuplicados.h
+        ListaOrdenada.cpp
+        ListaOrdenada.h)

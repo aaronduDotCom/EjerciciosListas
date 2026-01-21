@@ -4,6 +4,10 @@
 #include "ListaBusqueda.h"
 #include "ListaCaracteres.h"
 #include "ListaReales.h"
+#include "ListaPila.h"
+#include "ListaCola.h"
+#include "ListaDuplicados.h"
+#include "ListaOrdenada.h"
 
 using namespace std;
 
@@ -161,11 +165,119 @@ int main() {
             //6-10
             {
                 case 6: {
+                    ListaPila lista;
+
+                    cout<<"Ejercicio 6 LIFO mete al inicio y saca al inicio"<<"\n\n";
+
+                    cout<<"Primer prueba nada"<<"\n\n";
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Segunda prueba agregamos unos nodos (inicio)"<<"\n\n";
+                    lista.push(127);
+                    lista.push(4);
+                    lista.push(0);
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Tercer prueba pop"<<"\n";
+                    cout<<lista.pop()<<"\n\n";
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Cuarta prueba top"<<"\n";
+                    cout<<lista.top()<<"\n\n";
+
+                    cout<<"Quinta prueba saber si esta vacia"<<"\n";
+                    cout<<lista.estaVacia()<<"\n\n";
+
+                    cout<<"Sexta prueba saber el tamanno"<<"\n";
+                    cout<<lista.tamanno()<<"\n\n";
 
                 }break;
-                case 7:{}break;
-                case 8:{}break;
-                case 9:{}break;
+                case 7: {
+                    ListaCola lista;
+
+                    cout<<"Ejercicio 7 FIFO mete al final y saca al final"<<"\n\n";
+
+                    cout<<"Primer prueba nada"<<"\n\n";
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Segunda prueba agregamos unos nodos (final)"<<"\n\n";
+                    lista.encolar(127);
+                    lista.encolar(4);
+                    lista.encolar(0);
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Tercer prueba desencolar"<<"\n";
+                    cout<<lista.desencolar()<<"\n\n";
+                    //cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Cuarta prueba frente"<<"\n";
+                    cout<<lista.frente()<<"\n\n";
+
+                    cout<<"Quinta prueba saber si esta vacia"<<"\n";
+                    cout<<lista.estaVacia()<<"\n\n";
+
+                    cout<<"Sexta prueba saber el tamanno"<<"\n";
+                    cout<<lista.tamanno()<<"\n\n";
+                }break;
+                case 8: {
+                    ListaDuplicados lista;
+
+                    cout<<"Ejercicio 8"<<"\n\n";
+
+                    cout<<"Primer prueba nada"<<"\n\n";
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Segunda prueba agregamos unos nodos"<<"\n\n";
+                    lista.agregarInicio(0);
+                    lista.agregarInicio(4);
+                    lista.agregarInicio(0);
+                    lista.agregarInicio(13);
+                    lista.agregarInicio(88);
+                    lista.agregarInicio(0);
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Tercer prueba saber si hay duplicados"<<"\n";
+                    cout<<lista.tieneDuplicados()<<"\n\n";
+
+                    cout<<"Cuarta prueba eliminar los duplicados"<<"\n";
+                    lista.eliminarDuplicados();
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Quinta prueba contar los unicos"<<"\n";
+                    cout<<lista.contarUnicos()<<"\n\n";
+
+                    cout<<"Sexta prueba obtener los unicos (nueva lista)"<<"\n";
+                    cout<<lista.obtenerUnicos()->toString()<<"\n\n";
+
+                }break;
+                case 9: {
+                    ListaOrdenada lista;
+
+                    cout<<"Ejercicio 9 Esta la hice casi toda con chat para irla arreglando y aprendiendo"<<"\n\n";
+
+                    cout<<"Primer prueba nada"<<"\n\n";
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Segunda prueba agregamos unos nodos manteniendo el oreden ascendente y descendente"<<"\n\n";
+                    lista.insertarOrdenado(0);
+                    lista.insertarOrdenado(4);
+                    lista.insertarOrdenado(0);
+                    lista.insertarOrdenadoDesc(13);
+                    lista.insertarOrdenadoDesc(88);
+                    lista.insertarOrdenadoDesc(0);
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Quinta prueba saber si esta ordenada ambos sentidos"<<"\n";
+                    cout<<lista.estaOrdenada()<<"\n\n";
+
+                    cout<<"Sexta prueba ordenarla de forma ascendete"<<"\n";
+                    lista.ordenar();
+                    cout<<lista.toString()<<"\n\n";
+
+                    cout<<"Septima prueba ordenarla de forma descendete"<<"\n";
+                    lista.ordenarDesc();
+                    cout<<lista.toString()<<"\n\n";
+                }break;
                 case 10:{}break;
             }
         }

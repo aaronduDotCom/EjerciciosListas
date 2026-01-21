@@ -27,11 +27,11 @@ void ListaReales::agregarFinal(double n) {
     if (vacia())
         agregarInicio(n);
     else {
-        actual=primero;
-        while (actual->getSig()!=nullptr) {
-            actual=actual->getSig();
+        actual = primero;
+        while (actual->getSig() != nullptr) {
+            actual = actual->getSig();
         }
-        actual->setSig(new NodoLR(n,new NodoLR(n,nullptr)));
+        actual->setSig(new NodoLR(n, nullptr));
     }
 }
 

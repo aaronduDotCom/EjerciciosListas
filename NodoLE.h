@@ -14,6 +14,7 @@ public:
     NodoLE(int y,NodoLE*s);
     ~NodoLE();
     int getX();
+    void setX(int x);
     NodoLE *getSig();
     void setSig(NodoLE *s);
 };
